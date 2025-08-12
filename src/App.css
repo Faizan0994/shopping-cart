@@ -20,7 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.218);
+    box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.218);
 }
 
 .shop-heading {
