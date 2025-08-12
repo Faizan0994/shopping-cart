@@ -50,6 +50,11 @@ header {
     width: 8vw;
     height: auto;
     fill: #3d8361;
+    user-select: none;
+}
+
+.cart-icon > svg:hover {
+    fill: #d6cda4;
 }
 
 .cart-icon:hover {
