@@ -85,6 +85,10 @@ header button:hover {
     border-left: 1px solid #333333;
 }
 
+main {
+    height: 92vh;
+}
+
 @media screen and (min-width: 768px) {
     header {
         height: 10vh;
@@ -119,5 +123,9 @@ header button:hover {
         width: 2vh;
         height: 2vh;
         font-size: 1.5vh;
+    }
+
+    main {
+        height: 90vh;
     }
 }
