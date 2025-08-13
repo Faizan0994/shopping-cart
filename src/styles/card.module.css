@@ -1,0 +1,184 @@
+.card {
+    background-color: white;
+    width: 80vw;
+    height: 100vw;
+    box-shadow: 0 0 12px hsla(0, 0%, 0%, 0.171);
+    border-radius: 3vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.imgSection {
+    flex: 1;
+    background-color: darkgray;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgSection > img {
+    height: 90%;
+    width: min(90%, auto);
+}
+
+.detailSection {
+    flex: 1;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detailSection > h2 {
+    font-size: 5vw;
+    padding-top: 3%;
+}
+
+.desc {
+    font-size: 4vw;
+}
+
+.desc > button {
+    font-weight: 100;
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: inherit;
+    font-size: inherit;
+}
+
+.price {
+    color: hsl(49, 38%, 50%);
+    font-weight: bold;
+    font-size: 4vw;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+.actions > p {
+    display: none;
+}
+
+.qtyButton {
+    background-color: #3d8361;
+    border: none;
+    font-size: 5vw;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 2vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+    width: 6vw;
+    height: 6vw;
+    text-align: center;
+    padding: 0 1vw;
+    border-radius: 3vw;
+    border: 1px solid black;
+}
+
+.buyButton {
+    background-color: #3d8361;
+    color: white;
+    border: none;
+    font-size: 5vw;
+    border-radius: 5vw;
+    padding: 2vw;
+}
+
+.qtyLabel {
+    font-size: 4.5vw;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 28vw;
+        height: 28vw;
+        border-radius: 0.8vw;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        transition: transform 0.3s ease;
+    }
+
+    .detailSection > h2 {
+        font-size: 1.8vw;
+    }
+
+    .desc {
+        font-size: 1vw;
+    }
+
+    .price {
+        font-size: 1.2vw;
+    }
+
+    .qtyLabel {
+        font-size: 1.2vw;
+    }
+
+    .qtyButton {
+        font-size: 1.5vw;
+        padding: 0.5vw;
+        width: 1.5vw;
+        height: 1.5vw;
+        transition: transform 0.1s ease;
+    }
+
+    .qtyButton:hover {
+        transform: scale(1.05);
+        transition: transform 0.1s ease;
+    }
+
+    input[type="number"] {
+        height: 1.5vw;
+        width: 1.5vw;
+        padding: 0 0.5vw;
+        font-size: 1vw;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .inputContainer {
+        gap: 0.5vw;
+    }
+
+    .buyButton {
+        font-size: 1.2vw;
+        padding: 0.5vw 0.7vw;
+        transition: transform 0.1s ease;
+    }
+
+    .buyButton:hover {
+        transform: scale(1.05);
+        transition: transform 0.1s ease;
+    }
+}
