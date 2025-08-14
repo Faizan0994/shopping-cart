@@ -48,6 +48,9 @@ function Card({ product, description = "", price, image }) {
                             type="number"
                             id="quantityInput"
                             value={quantity}
+                            onChange={(event) => {
+                                setQuantity(event.target.value);
+                            }}
                         />
                         <button
                             className={styles.qtyButton}
