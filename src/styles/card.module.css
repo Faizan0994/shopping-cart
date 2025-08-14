@@ -121,12 +121,6 @@ input[type="number"] {
         width: 23vw;
         height: 23vw;
         border-radius: 0.8vw;
-        transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-        transform: scale(1.03);
-        transition: transform 0.3s ease;
     }
 
     .detailSection > h2 {
