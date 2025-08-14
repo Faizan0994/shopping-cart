@@ -3,7 +3,12 @@ import "./App.css";
 import { NavLink, Outlet } from "react-router-dom";
 
 function App() {
-    const [itemCount, setItemCount] = useState(0);
+    const [cart, setCart] = useState([]);
+    const itemCount = cart.length;
+
+    function updateCart(items) {
+        setCart([...cart, ...items]);
+    }
 
     return (
         <>
@@ -37,7 +42,7 @@ function App() {
                 </div>
             </header>
             <main>
-                <Outlet />
+                <Outlet context={{ addToCart: updateCart }} />
             </main>
         </>
     );

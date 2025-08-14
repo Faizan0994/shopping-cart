@@ -21,8 +21,17 @@ function Desc({ text, maxLength = 40 }) {
     );
 }
 
-function Card({ product, description = "", price, image }) {
+function Card({ product, description = "", price, image, id, addToCart }) {
     const [quantity, setQuantity] = useState(1);
+
+    function purchase() {
+        const itemList = [];
+        const item = { product: product, price: price, id: id, image: image };
+        for (let i = 1; i <= quantity; i++) {
+            itemList.push(item);
+        }
+        addToCart(itemList);
+    }
 
     return (
         <div className={styles.card}>
@@ -34,7 +43,7 @@ function Card({ product, description = "", price, image }) {
                 <Desc text={description} />
                 <p className={styles.price}>$ {price}</p>
                 <div className={styles.actions}>
-                    <label htmlFor="quantityInput" className={styles.qtyLabel}>
+                    <label htmlFor={`${id}`} className={styles.qtyLabel}>
                         Quantity:
                     </label>
                     <div className={styles.inputContainer}>
@@ -46,7 +55,7 @@ function Card({ product, description = "", price, image }) {
                         </button>
                         <input
                             type="number"
-                            id="quantityInput"
+                            id={`${id}`}
                             value={quantity}
                             onChange={(event) => {
                                 setQuantity(event.target.value);
@@ -59,7 +68,9 @@ function Card({ product, description = "", price, image }) {
                             -
                         </button>
                     </div>
-                    <button className={styles.buyButton}>Add to cart</button>
+                    <button className={styles.buyButton} onClick={purchase}>
+                        Add to cart
+                    </button>
                 </div>
             </div>
         </div>
