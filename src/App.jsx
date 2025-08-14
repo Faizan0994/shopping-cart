@@ -1,22 +1,22 @@
 import { useState } from "react";
 import "./App.css";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function App() {
     const [itemCount, setItemCount] = useState(0);
-    const [activeButton, setActiveButton] = useState("home");
 
-    function assignActiveStatus(currentButton) {
-        if (activeButton === currentButton) return "active";
-    }
     return (
         <>
             <header>
                 <h1 className="shop-heading">SHOP</h1>
                 <nav>
-                    <button className={assignActiveStatus("home")}>Home</button>
+                    <NavLink className="navButton" to="/">
+                        Home
+                    </NavLink>
                     <div className="divider"></div>
-                    <button className={assignActiveStatus("shop")}>Shop</button>
+                    <NavLink className="navButton" to="/shop">
+                        Shop
+                    </NavLink>
                 </nav>
                 <div className="cart-icon">
                     <svg
