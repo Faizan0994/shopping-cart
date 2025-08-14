@@ -26,6 +26,7 @@ header {
 .shop-heading {
     font-size: 8vw;
     font-weight: bold;
+    color: #3d8361;
 }
 
 .cart-icon {
@@ -68,19 +69,21 @@ nav {
     gap: 4vw;
 }
 
-nav > button {
+.navButton {
     appearance: none;
     background: transparent;
     font-size: 5vw;
     padding: 1vw;
     border: none;
+    color: inherit;
+    text-decoration: none;
 }
 
-nav > button.active {
+.navButton.active {
     color: #3d8361;
 }
 
-header button:hover {
+.navButton:hover {
     color: #d6cda4;
     cursor: pointer;
 }
@@ -114,7 +117,7 @@ button {
         gap: 1vw;
     }
 
-    nav > button {
+    .navButton {
         font-size: 4vh;
     }
 
