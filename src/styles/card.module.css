@@ -118,8 +118,8 @@ input[type="number"] {
 
 @media screen and (min-width: 768px) {
     .card {
-        width: 28vw;
-        height: 28vw;
+        width: 23vw;
+        height: 23vw;
         border-radius: 0.8vw;
         transition: transform 0.3s ease;
     }
@@ -130,28 +130,29 @@ input[type="number"] {
     }
 
     .detailSection > h2 {
-        font-size: 1.8vw;
+        font-size: 1.2vw;
     }
 
     .desc {
-        font-size: 1vw;
+        font-size: 0.9vw;
     }
 
     .price {
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
 
     .qtyLabel {
-        font-size: 1.2vw;
+        font-size: 1vw;
     }
 
     .qtyButton {
-        font-size: 1vw;
+        font-size: 0.9vw;
         padding: 0.5vw;
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1.2vw;
+        height: 1.2vw;
         transition: transform 0.1s ease;
         padding-bottom: 0.6vw;
+        align-items: center;
     }
 
     .qtyButton:hover {
@@ -160,10 +161,10 @@ input[type="number"] {
     }
 
     input[type="number"] {
-        height: 1.5vw;
-        width: 1.5vw;
+        height: 1.2vw;
+        width: 1.2vw;
         padding: 0 0.5vw;
-        font-size: 1vw;
+        font-size: 0.9vw;
         display: flex;
         align-items: flex-end;
     }
@@ -173,8 +174,8 @@ input[type="number"] {
     }
 
     .buyButton {
-        font-size: 1.2vw;
-        padding: 0.5vw 0.7vw;
+        font-size: 1vw;
+        padding: 0.35vw 0.6vw;
         transition: transform 0.1s ease;
     }
 
