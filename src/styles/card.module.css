@@ -146,11 +146,12 @@ input[type="number"] {
     }
 
     .qtyButton {
-        font-size: 1.5vw;
+        font-size: 1vw;
         padding: 0.5vw;
         width: 1.5vw;
         height: 1.5vw;
         transition: transform 0.1s ease;
+        padding-bottom: 0.6vw;
     }
 
     .qtyButton:hover {
