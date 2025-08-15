@@ -1,0 +1,103 @@
+.cartEntry {
+    background-color: white;
+    width: 80vw;
+    height: 30vw;
+    border-radius: 2vw;
+    box-shadow: 0 0 6px 4px hsla(0, 0%, 0%, 0.227);
+    display: flex;
+    justify-content: stretch;
+    overflow: hidden;
+}
+
+.entryContainer {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    appearance: none;
+}
+
+.deleteButton > svg {
+    width: 10vw;
+    height: auto;
+    fill: white;
+}
+
+.deleteButton > svg:hover {
+    fill: black;
+}
+
+.imgArea {
+    background-color: darkgray;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.imgArea > img {
+    width: 80%;
+    height: auto;
+}
+
+.info > h3 {
+    text-align: left;
+    font-size: 5vw;
+}
+
+.info {
+    flex: 2;
+    padding: 1vw 2vw 2vw 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.info p {
+    font-size: 4vw;
+}
+
+.total {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.totalAmount {
+    color: hsl(49, 38%, 50%);
+}
+
+@media screen and (min-width: 768px) {
+    .cartEntry {
+        width: 20vw;
+        height: 7vw;
+        border-radius: 1vw;
+    }
+
+    .info > h3 {
+        font-size: 1.1vw;
+    }
+
+    .info {
+        padding: 0.5vw 1vw 1vw 1vw;
+    }
+
+    .info p {
+        font-size: 1vw;
+    }
+
+    .deleteButton > svg {
+        width: 3vw;
+    }
+
+    .entryContainer {
+        gap: 1vw;
+    }
+}
