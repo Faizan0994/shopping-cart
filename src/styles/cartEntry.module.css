@@ -82,7 +82,7 @@
     }
 
     .info > h3 {
-        font-size: 1.1vw;
+        font-size: 1.05vw;
     }
 
     .info {
@@ -90,7 +90,7 @@
     }
 
     .info p {
-        font-size: 1vw;
+        font-size: 0.8vw;
     }
 
     .deleteButton > svg {
