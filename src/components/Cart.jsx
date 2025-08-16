@@ -1,7 +1,7 @@
 import styles from "../styles/cart.module.css";
 import CartEntry from "./CartEntry";
 
-function Cart({ cart }) {
+function Cart({ cart, setCart }) {
     // Change cart to a simpler version to display
     function mergeCart(cart) {
         const productMap = {};
@@ -30,6 +30,7 @@ function Cart({ cart }) {
                             quantity={item.quantity}
                             price={item.price}
                             id={item.id}
+                            removeFromCart={removeFromCart}
                             key={item.id}
                         />
                     );
@@ -44,6 +45,11 @@ function Cart({ cart }) {
         }, 0);
 
         return Number(total.toFixed(1)); // allow precision upto one decimal place only
+    }
+
+    function removeFromCart(id) {
+        const newCart = cart.filter((item) => item.id !== id);
+        setCart(newCart);
     }
 
     const finalCart = mergeCart(cart);
