@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { NavLink, Outlet } from "react-router-dom";
+import Cart from "./components/Cart";
 
 function App() {
     const [cart, setCart] = useState([]);
@@ -42,6 +43,7 @@ function App() {
                 </div>
             </header>
             <main>
+                <Cart cart={cart} setCart={setCart} />
                 <Outlet context={{ addToCart: updateCart }} />
             </main>
         </>
