@@ -5,10 +5,21 @@ import Cart from "./components/Cart";
 
 function App() {
     const [cart, setCart] = useState([]);
+    const [displayCart, setDisplayCart] = useState(false);
     const itemCount = cart.length;
 
     function updateCart(items) {
         setCart([...cart, ...items]);
+    }
+
+    function toggleCart() {
+        if (displayCart) setDisplayCart(false);
+        else setDisplayCart(true);
+        document.querySelector(".cart-icon").classList.toggle("active");
+    }
+
+    function renderCart() {
+        if (displayCart) return <Cart cart={cart} setCart={setCart} />;
     }
 
     return (
@@ -24,7 +35,7 @@ function App() {
                         Shop
                     </NavLink>
                 </nav>
-                <div className="cart-icon">
+                <div className="cart-icon" onClick={toggleCart}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -43,7 +54,7 @@ function App() {
                 </div>
             </header>
             <main>
-                <Cart cart={cart} setCart={setCart} />
+                {renderCart()}
                 <Outlet context={{ addToCart: updateCart }} />
             </main>
         </>
