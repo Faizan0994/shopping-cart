@@ -1,6 +1,6 @@
 import styles from "../styles/cartEntry.module.css";
 
-function CartEntry({ image, title, quantity, price, id }) {
+function CartEntry({ image, title, quantity, price, id, removeFromCart }) {
     function truncateString(str, limit = 50) {
         if (str.length <= limit) return str;
         return str.slice(0, limit) + "...";
@@ -24,7 +24,10 @@ function CartEntry({ image, title, quantity, price, id }) {
                     </div>
                 </div>
             </div>
-            <button className={styles.deleteButton}>
+            <button
+                className={styles.deleteButton}
+                onClick={() => removeFromCart(id)}
+            >
                 <svg
                     clipRule="evenodd"
                     fillRule="evenodd"
