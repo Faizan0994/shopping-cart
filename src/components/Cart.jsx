@@ -57,6 +57,7 @@ function Cart({ cart, setCart }) {
 
     return (
         <div className={styles.cart}>
+            <h1 className={styles.cartHeading}>Your Cart</h1>
             {displayEntries(finalCart)}
             <div className={styles.checkoutSection}>
                 <hr />

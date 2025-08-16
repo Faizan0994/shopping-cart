@@ -17,6 +17,11 @@
     animation: fadeInRight 0.3s ease-in-out forwards;
 }
 
+.cartHeading {
+    color: white;
+    font-size: 10vw;
+}
+
 .cart::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -75,6 +80,10 @@
         box-sizing: border-box;
         overflow-x: hidden;
         top: 10vh;
+    }
+
+    .cartHeading {
+        font-size: 3vw;
     }
 
     .checkoutSection > hr {
