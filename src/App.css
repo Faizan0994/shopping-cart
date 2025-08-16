@@ -54,8 +54,11 @@ header {
 .cart-icon > svg {
     width: 8vw;
     height: auto;
-    fill: #3d8361;
     user-select: none;
+}
+
+.cart-icon.active > svg {
+    fill: #3d8361;
 }
 
 .cart-icon > svg:hover {
