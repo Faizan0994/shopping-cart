@@ -52,6 +52,11 @@ function Cart({ cart, setCart }) {
         setCart(newCart);
     }
 
+    function handleCheckout() {
+        setCart([]);
+        alert("Order Placed! Too bad this isn't a real shop");
+    }
+
     const finalCart = mergeCart(cart);
     const total = calculateTotal(finalCart);
 
@@ -65,7 +70,12 @@ function Cart({ cart, setCart }) {
                     <h2 className={styles.netTotalHeading}>Net Total</h2>
                     <h2 className={styles.netTotalAmount}>$ {total}</h2>
                 </div>
-                <button className={styles.checkoutButton}>Checkout</button>
+                <button
+                    className={styles.checkoutButton}
+                    onClick={handleCheckout}
+                >
+                    Checkout
+                </button>
             </div>
         </div>
     );
