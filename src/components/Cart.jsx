@@ -60,6 +60,15 @@ function Cart({ cart, setCart }) {
     const finalCart = mergeCart(cart);
     const total = calculateTotal(finalCart);
 
+    if (cart.length === 0)
+        return (
+            <div className={styles.cart}>
+                <h1 className={styles.cartHeading}>Your Cart</h1>
+                <p className={styles.emptyMessage}>The cart appears empty</p>
+                {displayEntries(finalCart)}
+            </div>
+        );
+
     return (
         <div className={styles.cart}>
             <h1 className={styles.cartHeading}>Your Cart</h1>
