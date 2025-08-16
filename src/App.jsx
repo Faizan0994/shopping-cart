@@ -19,7 +19,10 @@ function App() {
     }
 
     function renderCart() {
-        if (displayCart) return <Cart cart={cart} setCart={setCart} />;
+        if (displayCart)
+            return (
+                <Cart cart={cart} setCart={setCart} toggleCart={toggleCart} />
+            );
     }
 
     return (

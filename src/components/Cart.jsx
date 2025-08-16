@@ -1,7 +1,7 @@
 import styles from "../styles/cart.module.css";
 import CartEntry from "./CartEntry";
 
-function Cart({ cart, setCart }) {
+function Cart({ cart, setCart, toggleCart }) {
     // Change cart to a simpler version to display
     function mergeCart(cart) {
         const productMap = {};
@@ -54,6 +54,7 @@ function Cart({ cart, setCart }) {
 
     function handleCheckout() {
         setCart([]);
+        toggleCart();
         alert("Order Placed! Too bad this isn't a real shop");
     }
 
