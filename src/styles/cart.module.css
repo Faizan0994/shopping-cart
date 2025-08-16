@@ -13,6 +13,8 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #aaa transparent;
+    transform: translateX(100%);
+    animation: fadeInRight 0.3s ease-in-out forwards;
 }
 
 .cart::-webkit-scrollbar {
@@ -57,6 +59,12 @@
     border-radius: 8vw;
     align-self: flex-end;
     margin-right: 5%;
+}
+
+@keyframes fadeInRight {
+    to {
+        transform: translateX(0);
+    }
 }
 
 @media screen and (min-width: 768px) {
