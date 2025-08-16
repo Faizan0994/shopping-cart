@@ -68,6 +68,11 @@
     margin-right: 5%;
 }
 
+.emptyMessage {
+    color: white;
+    font-size: 4vw;
+}
+
 @keyframes fadeInRight {
     to {
         transform: translateX(0);
@@ -99,5 +104,15 @@
     .checkoutButton {
         font-size: 1.5vw;
         padding: 1vw 1.2vw;
+        transition: transform 0.5s ease;
+    }
+
+    .checkoutButton:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease;
+    }
+
+    .emptyMessage {
+        font-size: 1vw;
     }
 }
